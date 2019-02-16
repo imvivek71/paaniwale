@@ -1,0 +1,35 @@
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'customer/style.css' %}"  />
+
+</head>
+
+<body>
+
+<hr>
+{% include "paaniwale/header.html" %}
+
+
+<div class="jumbotron">
+    <div class="container">
+
+        {% block main_content %}
+
+        {% endblock %}
+
+        {% include "paaniwale/footer.html" %}
+
+    </div>
+</div>
+
+</body>
+</html>

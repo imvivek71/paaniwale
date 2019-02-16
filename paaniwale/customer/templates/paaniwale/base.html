@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home Page</title>
-</head>
-<style>
-body{
-    background-color:yellow
 
-    }
+{% extends 'paaniwale/sample.html' %}'
 
-</style>
-<body style="background color: blue"><br>
+{% block main_content %}
+
 <h>Hello</h>
 <h1>Dear Customer Kindly fill the details</h1>
 
-<form>
+<form action="" method="post" target="_blank">
     First Name:<br>
     <input type="text" name="First Name"><br>
     Middle Name:<br>
@@ -32,10 +23,10 @@ body{
     <input type="radio" name="Gender" value="Other">Other<br><br>
 
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="Post">
 
 </form>
 
-</body>
-</html>
+
+{% endblock %}
 
