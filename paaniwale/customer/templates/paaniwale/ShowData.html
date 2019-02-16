@@ -1,0 +1,28 @@
+{% extends 'paaniwale/sample.html' %}'
+
+{% block main_content %}
+
+<h2> List of registered student </h2><h3 align="right"><a href="http://127.0.0.1:8000/customer">Return To HomePage</a></h3>
+
+<table style="background-color:white">
+    <tr>
+        <th style="color:red"> Name <br></th>
+        <th> Age <br><br></th>
+        <th> Gender<br><br> </th>
+    </tr>
+    {% for item in DATA %}
+       <tr>
+              <td style="color:blue">{{ item.FirstName }}
+                {{ item.MiddleName }}
+                {{ item.LastName }} <br><br></td>
+              <td style="color:green"> {{ item.Age }}  <br><br></td>
+              <td style="color:blue">  {{ item.Gender}}<br><br> </td>
+
+       </tr>
+    {% endfor %}
+
+
+</table>
+
+
+{% endblock %}

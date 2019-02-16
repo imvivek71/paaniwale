@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from.models import Post
 # Create your views here.
@@ -20,4 +20,9 @@ def index(request):
     else:
         return render(request, 'paaniwale/base.html')
 def details(request):
-    return render(request,'paaniwale/details.html')
+    return render(request, 'paaniwale/details.html',)
+
+def show(request):
+    DATA = Post.objects.all()
+    return render(request,'paaniwale/ShowData.html',{'DATA':DATA})
+
