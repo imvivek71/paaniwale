@@ -3,28 +3,28 @@
 
 {% block main_content %}
 
-<h>Hello</h>
-<h1>Dear Customer Kindly fill the details</h1>
+<h1 style="color:yellow">Dear Candidate Kindly fill the details</h1>
 
-<form action="" method="post" target="_self">
+<form action="" method="post" target="http://127.0.0.1:8000/customer/details">
     {% csrf_token %}
     First Name:<br>
-    <input type="text" name="FirstName"><br>
+    <input type ="text" pattern="[A-Za-z]+" title="First Name" name="FirstName"><br>
     Middle Name:<br>
-    <input type="text" name="MiddleName"><br>
+    <input type="text"  pattern ="[A-Za-z]+" title="MiddleName" name="MiddleName"><br>
     Last Name:<br>
-    <input type="text" name="LastName"><br>
+    <input type="text" pattern ="[A-Za-z]+" title="LastName" name="LastName"><br>
     Age:<br>
-    <input type="number" name="Age"><br><br>
+    <input type="number" title="Age" name="Age"><br><br>
 
-    Gender:<br>
+    Gender(M/F/O):<br>
 
-    <input type="text" name="Gender">
+    <input type="text" title="Gender" pattern="[M,F,O,m,o,f]" name="Gender">
 
     <input type="submit" value="Post">
 
 </form>
 
+<br><br><br><br><br><br><br>
+<h3 style="color:red"><a href="http://127.0.0.1:8000/customer/details">ViewDetailed</h3>
 
 {% endblock %}
-
