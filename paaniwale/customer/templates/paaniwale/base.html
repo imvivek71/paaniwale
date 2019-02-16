@@ -6,22 +6,20 @@
 <h>Hello</h>
 <h1>Dear Customer Kindly fill the details</h1>
 
-<form action="" method="post" target="_blank">
+<form action="" method="post" target="_self">
+    {% csrf_token %}
     First Name:<br>
-    <input type="text" name="First Name"><br>
+    <input type="text" name="FirstName"><br>
     Middle Name:<br>
-    <input type="text" name="Middle Name"><br>
+    <input type="text" name="MiddleName"><br>
     Last Name:<br>
-    <input type="text" name="Last Name"><br>
+    <input type="text" name="LastName"><br>
     Age:<br>
-    <input type="number" name="Age in years"><br><br>
+    <input type="number" name="Age"><br><br>
 
     Gender:<br>
 
-    <input type="radio" name="Gender" value="Male">Male<br>
-    <input type="radio" name="Gender" value="Female">Female<br>
-    <input type="radio" name="Gender" value="Other">Other<br><br>
-
+    <input type="text" name="Gender">
 
     <input type="submit" value="Post">
 
